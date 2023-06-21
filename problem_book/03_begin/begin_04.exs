@@ -2,5 +2,5 @@
 # значения π использовать 3.14.
 
 d = String.to_integer(String.trim(IO.gets("Enter d\n")))
-l = :math.pi * d
+l = :math.pi() * d
 IO.puts("L = #{l}")
