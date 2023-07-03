@@ -13,6 +13,7 @@ n =
     n > 0 -> n + 1
     n < 0 -> n - 2
     n == 0 -> 10
+    true -> IO.pust("error condition")
   end
 
 IO.puts("n = #{n}")
