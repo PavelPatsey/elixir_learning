@@ -8,7 +8,8 @@
 x =
   IO.gets("Enter x\n")
   |> String.trim()
-  |> String.to_float()
+  |> Float.parse()
+  |> elem(0)
 
 f =
   cond do
