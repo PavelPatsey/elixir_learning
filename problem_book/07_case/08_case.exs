@@ -7,7 +7,7 @@
   |> String.split()
   |> Enum.map(&String.to_integer/1)
 
-[d, m] =
+answer =
   if d != 1 do
     [d - 1, m]
   else
@@ -29,4 +29,4 @@
     [31, m - 1]
   end
 
-IO.puts(Enum.join([d, m], " "))
+IO.puts(Enum.join(answer, " "))
