@@ -9,9 +9,10 @@
   |> Enum.map(&String.to_integer/1)
 
 [a, b, c] =
-  cond do
-    a <= b and b <= c -> [a, b, c]
-    true -> [-a, -b, -c]
+  if a <= b and b <= c do
+    [a, b, c]
+  else
+    [-a, -b, -c]
   end
 
 IO.puts(Enum.join([a, b, c], " "))
