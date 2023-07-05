@@ -9,7 +9,7 @@
 
 [d, m] =
   if d != 1 do
-    [d, m]
+    [d - 1, m]
   else
     case m do
       1 -> [31, 12]
