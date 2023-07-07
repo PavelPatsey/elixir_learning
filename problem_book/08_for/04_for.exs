@@ -4,6 +4,7 @@
 n =
   IO.gets("Enter number\n")
   |> String.trim()
-  |> String.to_integer()
+  |> Float.parse()
+  |> elem(0)
 
 for k <- 1..10, do: IO.puts(n * k)
