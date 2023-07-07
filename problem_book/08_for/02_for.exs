@@ -21,8 +21,8 @@ output
 4
 """
 
-
-[a, b] = IO.gets("Enter a and b\n")
+[a, b] =
+  IO.gets("Enter a and b\n")
   |> String.trim()
   |> String.split()
   |> Enum.map(&String.to_integer/1)
