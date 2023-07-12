@@ -30,10 +30,9 @@ n =
   |> String.trim()
   |> String.to_integer()
 
-list = Enum.map(1..n, fn x -> 2 * x - 1 end)
-
-for i <- 0..(length(list) - 1) do
-  Enum.slice(list, 0..i)
+Enum.map(1..n, fn x ->
+  Enum.to_list(1..x)
+  |> Enum.map(fn x -> 2 * x - 1 end)
   |> Enum.sum()
   |> IO.inspect()
-end
+end)
