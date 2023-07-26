@@ -4,10 +4,11 @@
 # процедуры поменять порядок следования цифр на обратный для каждого
 # из пяти данных целых чисел.
 
-k =
+list =
   IO.gets("Enter integer number k\n")
   |> String.trim()
-  |> String.to_integer()
+  |> String.split()
+  |> Enum.map(&String.to_integer/1)
 
 defmodule Proc7 do
   def invert_digits(k) do
@@ -17,4 +18,4 @@ defmodule Proc7 do
   end
 end
 
-IO.puts(Proc7.invert_digits(k))
+IO.puts(Enum.map(list, &Proc7.invert_digits/1) |> Enum.join(" "))
