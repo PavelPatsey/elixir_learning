@@ -11,17 +11,17 @@ defmodule Proc3 do
   def mean(x, y) do
     amean = (x + y) / 2
     gmean = :math.sqrt(x * y)
-    {amean, gmean}
+    [amean, gmean]
   end
 end
 
 [a, b, c, d] =
-  IO.gets("Enter a, b, c, d\n")
+  IO.gets("Enter positive numbers a, b, c, d\n")
   |> String.trim()
   |> String.split()
   |> Enum.map(&Float.parse/1)
   |> Enum.map(fn x -> elem(x, 0) end)
 
-IO.puts(Proc3.mean(a, b) |> Tuple.to_list() |> Enum.join(" "))
-IO.puts(Proc3.mean(a, c) |> Tuple.to_list() |> Enum.join(" "))
-IO.puts(Proc3.mean(a, d) |> Tuple.to_list() |> Enum.join(" "))
+IO.puts(Proc3.mean(a, b) |> Enum.join(" "))
+IO.puts(Proc3.mean(a, c) |> Enum.join(" "))
+IO.puts(Proc3.mean(a, d) |> Enum.join(" "))
