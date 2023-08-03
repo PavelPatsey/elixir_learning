@@ -13,9 +13,6 @@
 # output
 # 5.368
 
-a = 1.2
-n = 3
-
 [a_str, n_str] =
   IO.gets("Enter float a and integer n\n")
   |> String.trim()
