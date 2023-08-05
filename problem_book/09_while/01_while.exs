@@ -18,7 +18,8 @@
   IO.gets("Enter a and b > 0\n")
   |> String.trim()
   |> String.split()
-  |> Enum.map(&String.to_integer/1)
+  |> Enum.map(&Float.parse/1)
+  |> Enum.map(&elem(&1, 0))
 
 defmodule While01 do
   def mod(a, b) do
