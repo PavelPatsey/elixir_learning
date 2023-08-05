@@ -28,14 +28,11 @@ n =
   |> String.to_integer()
 
 defmodule While09 do
-  def power_of_3?(x) do
-    cond do
-      x == 1 -> true
-      x == 0 -> false
-      rem(x, 3) == 0 -> power_of_3?(div(x, 3))
-      true -> false
-    end
-  end
+  def power_of_3?(1), do: true
+
+  def power_of_3?(x) when rem(x, 3) == 0, do: power_of_3?(div(x, 3))
+
+  def power_of_3?(_), do: false
 end
 
 IO.puts(While09.power_of_3?(n))
