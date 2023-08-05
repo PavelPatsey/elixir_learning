@@ -21,12 +21,9 @@
   |> Enum.map(&elem(Float.parse(&1), 0))
 
 defmodule While01 do
-  def mod(a, b) do
-    cond do
-      a >= b -> mod(a - b, b)
-      a < b -> a
-    end
-  end
+  def mod(a, b) when a >= b, do: mod(a - b, b)
+
+  def mod(a, _), do: a
 end
 
 IO.puts(While01.mod(a, b))
